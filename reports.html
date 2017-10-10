@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,92 +22,598 @@
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="img/logo.png" alt="What would you like to see"></a>
-
-        </div>
-	<!--
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        </div>
-	-->
-      </div>
-    </nav>
-
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-      <div class="row">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="What would you like to see"></a>
+
+        </div>
+        <!--
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Help</a></li>
+              </ul>
+              <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+              </form>
+            </div>
+        -->
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="dashboard.html">Dashboard<span class="sr-only">(current)</span></a></li>
-            <li><a href="reports.html">Logs and Reports</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="add_users.html">Add Users</a></li>
-          </ul>
-	<!--
-          <ul class="nav nav-sidebar">
-            <li><a href="">Add Asset</a></li>
-          </ul>
-	-->
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="dashboard.html">Dashboard<span class="sr-only">(current)</span></a></li>
+                <li><a href="reports.html">Logs and Reports</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="add_users.html">Add Users</a></li>
+            </ul>
+            <!--
+                  <ul class="nav nav-sidebar">
+                    <li><a href="">Add Asset</a></li>
+                  </ul>
+            -->
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Financial Analytics</h1>
+            <h1 class="page-header">Financial Analytics</h1>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-sm-6" id="chart1"></div>
-        <div class="col-md-6 col-sm-6" id="chart2"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-9 col-sm-9" id="chart3"></div>
-        <div class="col-md-3 col-sm-3"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-3"></div>
-        <div class="col-md-3 col-sm-3"></div>
-        <div class="col-md-6 col-sm-6"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6" id="graph1"></div>
+                    <div class="col-md-6 col-sm-6" id="graph2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"></div>
+                    <div class="col-md-3 col-sm-3"></div>
+                    <div class="col-md-6 col-sm-6"></div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 
-        </div>
-      </div>
-    </div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="lib/jquery.min.js"><\/script>')</script>
+<script src="lib/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="lib/ie10-viewport-bug-workaround.js"></script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="lib/jquery.min.js"><\/script>')</script>
-    <script src="lib/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="lib/ie10-viewport-bug-workaround.js"></script>
+<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+<!--<script src="lib/d3_example_charts.js"></script> -->
+<script src="lib/d3.min.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/d3.min.js"></script>
+<script src="lib/sankey.js"></script>
+<script src="lib/neo4j-web.min.js"></script>
+<script>
 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="lib/d3_example_charts.js"></script> 
-  </body>
+    //    var domain = "localhost";
+    var domain = "ec2-18-222-1-137.us-east-2.compute.amazonaws.com";
+    var neo = neo4j.v1;
+    var driver = neo.driver("bolt://" + domain + ":7687", neo.auth.basic("neo4j", "neo4j"));
+    var session = driver.session();
+
+    $(document).ready(function () {
+
+        var depth = 4;
+        var _search = "";
+        var query1 = {
+            "statements": [{
+                "statement": "match (m:Application),(n),o=(m)-[*1..2]-(n) where m.name = 'IApps' return m,n,o limit 400",
+                "resultDataContents": ["graph"]
+            }]
+        };
+        ajaxCall(query1);
+
+        var e = "forLater";
+        var _depth = 2, _search = "", _limit = 100, _label = "BRAM1";
+        var direction = "";
+
+        getLabels(e);
+        function main_query(_label, _search, _depth, _limit) {
+            var mStatement;
+            if (_search == "") {
+                mStatement = "match (m:" + _label + "),(n),o=(m)-[*0.." + _depth + "]-(n) return m.name,n.name,o limit " + _limit;
+            }
+            else {
+                mStatement = "match (m:" + _label + "),(n),o=(m)-[*0.." + _depth + "]-(n) where m.name=~ '(?i).*" + _search + ".*' return m.name,n.name,o limit " + _limit
+            }
+            return mStatement;
+        }
+        var query2 = {
+            "statements": [{
+                "statement": main_query(_label, _search, _depth, _limit),
+                "resultDataContents": ["graph"]
+            }]
+        };
+        ajaxCall2(query2, direction)
+    });
+    function getLabels(e) {
+
+        var descrip;
+        var statement = "CYPHER runtime=compiled Call db.labels";
+        session.run(statement)
+            .then(function (result) {
+                var records = [];
+                for (i = 0; i < result.records.length; i++) {
+                    records.push(result.records[i]);
+                }
+                return records;
+            })
+            .then(function (records) {
+                //console.log (records);
+                for (i = 0; i < records.length; i++) {
+                    descrip = records[i].get("label");
+                    $('#labels').append('<option value=' + descrip + '>' + descrip + '</option>');
+                    // console.log(descrip);
+                }
+            });
+
+    }
+    function idIndex(a, id) {
+        for (var i = 0; i < a.length; i++) {
+            if (a[i].id == id) return i;
+        }
+        return null;
+    }
+    // jQuery ajax call
+    var color = d3.scale.category20();
+    function ajaxCall(query) {
+        console.log("@@@@@@@@@@@@@@@@@@@@")
+        console.log(JSON.stringify(query));
+        var nodes = [], links = [];
+        var request = $.ajax({
+            type: "POST",
+            url: "http://" + domain + ":7474/db/data/transaction/commit",
+            accepts: {json: "application/json"},
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify(query),
+
+            //now pass a callback to success to do something with the data
+            success: function (data) {
+                console.log("ajax1")
+                console.log(data);
+                // parsing the output of neo4j rest api
+                data.results[0].data.forEach(function (row) {
+                    row.graph.nodes.forEach(function (n) {
+                        // console.log (n);
+                        if (idIndex(nodes, n.id) == null) {
+                            nodes.push({id: n.id, label: n.labels[0], name: n.labels[0] + ":" + n.properties.name});
+                        }
+                    });
+                    links = links.concat(row.graph.relationships.map(function (r) {
+                        // the neo4j documents has an error : replace start with source and end with target
+                        return {source: idIndex(nodes, r.startNode), target: idIndex(nodes, r.endNode), type: r.type};
+                    }));
+                });
+                graph = {nodes: nodes, links: links};
+                console.log(graph);
+                drawGraph(graph);
+            }
+
+        });
+    }
+    function drawGraph(json) {
+        var xcolor = {};
+        var width = 1800,
+            height = 1200
+
+        d3.selectAll("svg").remove();
+
+
+        var svg = d3.select("#graph1").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+//var tree = d3.layout.tree()
+
+        var force = d3.layout.force()
+            .gravity(0.09)
+            .distance(100)
+            .charge(-300)
+
+            .size([width, height]);
+
+        var drag = force.drag()
+            .on("dragstart", dragstart);
+
+        force
+            .nodes(json.nodes)
+            .links(json.links)
+            .start();
+
+        var link = svg.selectAll(".link")
+            .data(json.links)
+            .enter().append("line")
+            .attr("class", "link");
+
+
+        var node = svg.selectAll(".node")
+            .data(json.nodes)
+            .enter().append("g")
+            //.style("fill", mycolor)
+            .attr("class", "node")
+            .call(force.drag)
+
+
+        node.append("circle")
+            .on("click", click)
+            .attr("x", -8)
+            .attr("y", -8)
+            .attr("r", 15)
+            //.attr("width", 80)
+            //.attr("height", 16)
+            .on("mouseover", function (d) {
+                var g = d3.select(this)
+                    .transition()
+                    .ease("elastic")
+                    .duration(500)
+                    .attr("r", 15 * 4)
+                    // .attr("width", 180)
+                    //.attr("height", 32)
+                    .style("stroke", "black")
+                    .style("stroke-width", 2)
+
+
+            })
+
+            .on("mouseout", function (d) {
+                var g = d3.select(this)
+                    .transition()
+                    .ease("elastic")
+                    .duration(500)
+                    .attr("r", 15)
+                    // .attr("width", 80)
+                    //.attr("height", 16)
+                    .style("stroke", "none")
+                    .style("stroke-width", 2)
+
+
+            });
+
+
+        node.append("text")
+            .text(function (d) {
+                return (d.name).substring(0, 10) + '...'
+            })
+            .attr("dx", -6) //12
+            .attr("dy", ".15em")
+            .attr("fill", "grey");
+
+
+        force.on("tick", function () {
+
+            link.attr("x1", function (d) {
+                return d.source.x;
+            })
+                .attr("y1", function (d) {
+                    return d.source.y;
+                })
+                .attr("x2", function (d) {
+                    return d.target.x;
+                })
+                .attr("y2", function (d) {
+                    return d.target.y;
+                });
+
+            node.attr("transform", function (d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            });
+        });
+
+        function flatten(root) {
+            var nodes = [], i = 0;
+
+            function recurse(node) {
+                if (node.children) node.children.forEach(recurse);
+                if (!node.id) node.id = ++i;
+                nodes.push(node);
+            }
+
+            recurse(root);
+            return nodes;
+        }
+
+
+        function mycolor(d) {
+            var colorKey;
+            var colorValue;
+            var ids = d.name.split(":");
+
+            if (ids.length == 1) {
+                if (xcolor.colorKey == ids[0]) {
+                    xcolor.colorValue = color(d.ID);
+                }
+                else {
+                    colorKey = ids[0];
+                    colorValue = color(d.ID);
+                    xcolor[colorKey] = colorValue;
+                    //console.log(xcolor);
+                }
+            }
+            else {
+                colorValue = xcolor[ids[0]];
+            }
+            return d.color = colorValue;
+            //return  d.color = color(d.ID.replace(/ .*/, ""));
+
+            //return d.color ? "#3182bd" : d.color ? "#c6dbef" : "#fd8d3c";
+        }
+
+        function dragstart(d) {
+            d3.select(this).classed("fixed", d.fixed = true);
+        }
+
+        function click(d) {
+            $('#results').empty();
+            $('#results').append("<tr id=" + d.ID + " onclick=row_click('" + d.ID + "')><td>" + d.ID + "</td><td>" + d.title + "</td></tr>");
+            //alert (d.title);
+        }
+
+
+        /*function click(d) {
+         if (!d3.event.defaultPrevented) {
+         if (d.children) {
+         d._children = d.children;
+         d.children = null;
+         } else {
+         d.children = d._children;
+         d._children = null;
+         }
+         update();
+         }
+         }*/
+    }
+    function ajaxCall2(query, direction) {
+
+        var graph;
+        var _search = "acqui";
+
+        var nodes = [], links = [];
+        var request = $.ajax({
+            type: "POST",
+            url: "http://ec2-18-222-1-137.us-east-2.compute.amazonaws.com:7474/db/data/transaction/commit",
+            accepts: {json: "application/json"},
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify(query),
+            //now pass a callback to success to do something with the data
+            success: function (data) {
+                console.log("ajax2");
+                console.log(data);
+                // parsing the output of neo4j rest api
+                data.results[0].data.forEach(function (row) {
+                    row.graph.nodes.forEach(function (n) {
+
+                        if (idIndex(nodes, n.id) == null) {
+                            if (n.labels[0] == "Person") {
+                                nodes.push({
+                                    id: parseInt(n.id),
+                                    label: n.labels[0],
+                                    name: n.properties.role + ":" + n.properties.name
+                                });
+                            }
+                            else {
+                                nodes.push({id: parseInt(n.id), label: n.labels[0], name: n.properties.name});
+                            }
+                        }
+                    });
+                    links = links.concat(row.graph.relationships.map(function (r) {
+                        //return {source:idIndex(nodes,r.startNode),target:idIndex(nodes,r.endNode), value:Math.floor(Math.random() * (20 + 1)) + 5};
+                        return {
+                            source: r.startNode,
+                            target: r.endNode,
+                            value: Math.floor(Math.random() * (20 + 1)) + 5
+                        };
+
+                    }));
+                });
+                graph = {nodes: nodes, links: links};
+                drawGraph2(graph, direction);
+            }
+
+        });
+    }
+    function drawGraph2(graph, direction) {
+        var _search = "acqui";
+        var units = "Capabilities";
+
+        var margin = {top: 10, right: 10, bottom: 10, left: 10},
+            width = 1400 - margin.left - margin.right,         //1200
+            height = 900 - margin.top - margin.bottom;         //740
+
+        var formatNumber = d3.format(",.0f"),    // zero decimal places
+            format = function (d) {
+                return formatNumber(d) + " " + units;
+            },
+            color = d3.scale.category20();
+
+// append the svg canvas to the page
+
+        try {
+            path = "";
+            sankey
+                .nodes()
+                .links()
+                .layout(32);
+        }
+        catch (err) {
+
+        }
+        d3.select("#the_SVG_ID").remove();
+
+
+        var svg = d3.select("#graph2").append("svg")
+                .attr("id", "the_SVG_ID")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")")
+            ;
+
+// Set the sankey diagram properties
+        var sankey = d3.sankey()
+            .nodeWidth(36)
+            .nodePadding(10)
+            .size([width, height]);
+
+        var path = sankey.link();
+
+        var nodeMap = {};
+        graph.nodes.forEach(function (x) {
+            nodeMap[x.id] = x;
+        });
+
+        graph.links = graph.links.map(function (x) {
+            if (direction == "reverse") {
+                return {
+                    target: nodeMap[x.source],
+                    source: nodeMap[x.target],
+                    value: x.value
+                };
+
+            }
+            else {
+                return {
+                    source: nodeMap[x.source],
+                    target: nodeMap[x.target],
+                    value: x.value
+                };
+            }
+
+        });
+        ;
+        sankey
+            .nodes(graph.nodes)
+            .links(graph.links)
+            .layout(32);
+
+// add in the links
+        function zoomFunction() {
+            d3.selectAll("path")
+                .attr("transform",
+                    "translate(" + d3.event.translate + ") scale (" + d3.event.scale + ")");
+        }
+
+        var link = svg.append("g").selectAll(".link")
+            .data(graph.links)
+            .enter().append("path")
+            .attr("class", "link")
+            .attr("d", path)
+            .style("stroke-width", function (d) {
+                return Math.max(1, d.dy);
+            })
+            .sort(function (a, b) {
+                return b.dy - a.dy;
+            });
+
+// add the link titles
+        link.append("title")
+            .text(function (d) {
+                // console.log(d);
+                return d.source.ID + " → " +
+                    d.target.ID + "\n" + format(d.value);
+            });
+
+// add in the nodes
+        var node = svg.append("g").selectAll(".node")
+            .data(graph.nodes)
+            .enter().append("g")
+            .attr("class", "node")
+            .attr("transform", function (d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            })
+            .call(d3.behavior.drag()
+                .origin(function (d) {
+                    return d;
+                })
+                .on("dragstart", function () {
+                    this.parentNode.appendChild(this);
+                })
+                .on("drag", dragmove));
+
+// add the rectangles for the nodes
+        node.append("rect")
+            .attr("height", function (d) {
+                return d.dy;
+            })
+            .attr("width", sankey.nodeWidth())
+            .style("fill", function (d) {
+                return d.color = color(d.name.replace(/ .*/, ""));
+            })
+            .style("stroke", function (d) {
+                return d3.rgb(d.color).darker(2);
+            })
+            .append("title")
+            .text(function (d) {
+                return d.name + "\n" + format(d.value);
+            });
+
+// add in the title for the nodes
+        node.append("text")
+            .attr("x", -6)
+            .attr("y", function (d) {
+                return d.dy / 2;
+            })
+            .attr("dy", ".35em")
+            .attr("text-anchor", "end")
+            .attr("transform", null)
+            .text(function (d) {
+                return d.name;
+            })
+            .filter(function (d) {
+                return d.x < width / 2;
+            })
+            .attr("x", 6 + sankey.nodeWidth())
+            .attr("text-anchor", "start");
+
+// the function for moving the nodes
+        function dragmove(d) {
+            d3.select(this).attr("transform",
+                "translate(" + (
+                    d.x = Math.max(0, Math.min(width - d.dx, d3.event.x))
+                ) + "," + (
+                    d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+                ) + ")");
+            sankey.relayout();
+            link.attr("d", path);
+        }
+
+        var zoom = d3.behavior.zoom()
+            .scaleExtent([0.2, 10])
+            .on("zoom", zoomFunction);
+
+
+    }
+
+</script>
+</body>
 </html>
 

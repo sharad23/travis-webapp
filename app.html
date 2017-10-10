@@ -144,8 +144,11 @@
 
 
 <script>
+
+//    var domain = "localhost";
+    var domain = "ec2-18-222-1-137.us-east-2.compute.amazonaws.com";
     var neo = neo4j.v1;
-    var driver = neo.driver("bolt://localhost:7687", neo.auth.basic("neo4j", "sharad"));
+    var driver = neo.driver("bolt://"+ domain +":7687", neo.auth.basic("neo4j", "neo4j"));
     var session = driver.session();
 
     $(document).ready(function () {
@@ -270,7 +273,7 @@
         var nodes = [], links = [];
         var request = $.ajax({
             type: "POST",
-            url: "http://localhost:7474/db/data/transaction/commit",
+            url: "http://"+ domain +":7474/db/data/transaction/commit",
             accepts: {json: "application/json"},
             dataType: "json",
             contentType: "application/json",
